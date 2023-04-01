@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import logo from '../../assets/logo.png';
 
 const NavbarContainer = styled.div`
+  display: flex;
+  justify-content: center;
     width: 100%;
-    display: flex;
-    justify-content: center;
 `;
 const Content = styled.div`
     width: 90%;
@@ -12,6 +12,11 @@ const Content = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 10px 0px;
+
+    @media only screen and (max-width: 768px) {
+    width: 100%;
+    padding: 10px;
+  }
 `;
 const Links = styled.div`
     align-items: center;
@@ -29,6 +34,10 @@ const List = styled.ul`
     display: flex;
     list-style: none;
     gap: 2rem;
+
+    @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const ListItem = styled.li`
@@ -38,7 +47,7 @@ const ListItem = styled.li`
 const Button = styled.button`
     width: 5rem;
     padding: 10px;
-    background-color: #6be2eb;
+    background-color: #50b0cf;
     border: none;
     border-radius: 5px;
     cursor: pointer;

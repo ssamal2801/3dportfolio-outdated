@@ -5,19 +5,18 @@ import Contact from './components/Contact/Contact';
 import Experience from './components/Experience/Experience';
 import Greetings from './components/Greetings/Greetings';
 import Intro from './components/Intro/Intro';
-import backgroundImg from './assets/img.jpg';
 
 const AppContainer = styled.div`
   height: 100vh;
+  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   overflow-y: auto;
   scrollbar-width: none;
-  scroll-snap-type: y mandatory;
+  color: white;
+  background: black;
   &::-webkit-scrollbar{
     display: none;
   }
-  color: white;
-  background: url(${backgroundImg});
 `
 
 function App() {
