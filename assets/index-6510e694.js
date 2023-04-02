@@ -166,7 +166,7 @@ PERFORMANCE OF THIS SOFTWARE.
     @media only screen and (max-width: 768px) {
       overflow: visible;
     }
-`,q4=()=>Ze(Z4,{children:Ze(Y4,{})}),J4="/assets/logo-9e68c172.png",$4=Ct.div`
+`,q4=()=>Ze(Z4,{children:Ze(Y4,{})}),J4="/logo.png",$4=Ct.div`
     display: flex;
     justify-content: center;
     width: 100%;
@@ -198,7 +198,7 @@ PERFORMANCE OF THIS SOFTWARE.
     cursor: pointer;
 `,nO=Ct.img`
     height: 4rem;
-`,iO=()=>{const n="https://www.linkedin.com/in/ssamal94/";return Ze($4,{children:Ei(Q4,{children:[Ze(K4,{children:Ze(nO,{src:J4})}),Ze(eO,{children:Ze(tO,{onClick:()=>window.open(n),children:"Hire me!"})})]})})},rO="/assets/world-2662d67f.png";function Es(){return Es=Object.assign?Object.assign.bind():function(n){for(var e=1;e<arguments.length;e++){var t=arguments[e];for(var i in t)Object.prototype.hasOwnProperty.call(t,i)&&(n[i]=t[i])}return n},Es.apply(this,arguments)}/**
+`,iO=()=>{const n="https://www.linkedin.com/in/ssamal94/";return Ze($4,{children:Ei(Q4,{children:[Ze(K4,{children:Ze(nO,{src:J4})}),Ze(eO,{children:Ze(tO,{onClick:()=>window.open(n),children:"Hire me!"})})]})})},rO="/world.png";function Es(){return Es=Object.assign?Object.assign.bind():function(n){for(var e=1;e<arguments.length;e++){var t=arguments[e];for(var i in t)Object.prototype.hasOwnProperty.call(t,i)&&(n[i]=t[i])}return n},Es.apply(this,arguments)}/**
  * @license
  * Copyright 2010-2023 Three.js Authors
  * SPDX-License-Identifier: MIT
