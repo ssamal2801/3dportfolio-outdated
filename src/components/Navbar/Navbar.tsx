@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import logo from '../../assets/logo.png';
+import { useNavigate } from "react-router-dom";
+
 
 const NavbarContainer = styled.div`
   display: flex;
@@ -58,20 +60,20 @@ const Logo = styled.img`
 `;
 
 const Navbar = () => {
+    const linkedin = 'https://www.linkedin.com/in/ssamal94/';
     return (
         <NavbarContainer>
             <Content>
                 <Links>
                     <Logo src={logo} />
                     <List>
-                        <ListItem>Home</ListItem>
                         <ListItem>Intro</ListItem>
                         <ListItem>Experience</ListItem>
                         <ListItem>Contact</ListItem>
                     </List>
                 </Links>
                 <Icons>
-                    <Button>Hire me!</Button>
+                    <Button onClick={() => window.open(linkedin)}>Hire me!</Button>
                 </Icons>
             </Content>
         </NavbarContainer>

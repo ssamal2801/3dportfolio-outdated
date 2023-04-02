@@ -1,64 +1,34 @@
-import React from "react";
-import {
-  ComposableMap,
-  Geographies,
-  Geography,
-  Annotation,
-} from "react-simple-maps";
+import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
+import { useMemo } from 'react';
+import styled from 'styled-components';
+
+const mapstyles = {
+  width: '93%',
+  height: '75%',
+  'marginTop': '8rem',
+  'alignItems': 'center',
+  'justifyContent': 'flex-end',
+};
+
+const Nomap = styled.div`
+    width: 100%;
+    height: 100%;
+    color: white;
+`;
 
 const Map = () => {
-  return (
-    <ComposableMap
-      projection="geoAzimuthalEqualArea"
-      projectionConfig={{
-        rotate: [-10.0, -52.0, 0],
-        center: [-5, -3],
-        scale: 1600
-      }}
-      style={{width:"100%", height:"100%"}}
-    >
-      <Geographies
-        geography="/features.json"
-        fill="#2C065D"
-        stroke="#FFFFFF"
-        strokeWidth={0.5}
-      >
-        {({ geographies } :any) =>
-          geographies.map((geo :any) => (
-            <Geography key={geo.rsmKey} geography={geo} />
-          ))
-        }
-      </Geographies>
-      <Annotation
-        subject={[2.3522, 48.8566]}
-        dx={-90}
-        dy={-30}
-        connectorProps={{
-          stroke: "white",
-          strokeWidth: 2,
-          strokeLinecap: "round"
-        }}
-      >
-        <text x="-8" textAnchor="end" alignmentBaseline="middle" fill="white">
-          {"Paris"}
-        </text>
-      </Annotation>
-      <Annotation
-        subject={[21.01178, 52.22977]}
-        dx={-90}
-        dy={-30}
-        connectorProps={{
-          stroke: "white",
-          strokeWidth: 2,
-          strokeLinecap: "round"
-        }}
-      >
-        <text x="-8" textAnchor="end" alignmentBaseline="middle" fill="white">
-          {"Warsaw"}
-        </text>
-      </Annotation>
-    </ComposableMap>
-  );
+    const center = useMemo(() => ({ lat: 43.469910, lng: -80.580588 }), []);
+    const { isLoaded } = useLoadScript({
+        googleMapsApiKey: 'AIzaSyCo2Le8QOwTG_iiFi3uw_hkOuxB3gSln9g',
+    });
+    if (!isLoaded) {
+        return <Nomap>Error loading map</Nomap>;
+    }
+    return (
+            <GoogleMap zoom={10} center={center} mapContainerStyle={mapstyles}>
+                <Marker position={center} />
+            </GoogleMap>
+    );
 };
 
 export default Map;

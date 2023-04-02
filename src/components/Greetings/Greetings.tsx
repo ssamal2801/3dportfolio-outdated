@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 import Navbar from '../Navbar/Navbar';
 import worldImg from '../../assets/world.png';
+import { OrbitControls, MeshDistortMaterial, Sphere } from '@react-three/drei';
+import { Canvas } from '@react-three/fiber';
+import { Suspense } from 'react';
 
 const IntroContainer = styled.div`
     height: 90vh;
@@ -52,7 +55,7 @@ const Title = styled.h1`
     @media only screen and (max-width: 768px) {
         text-align: center;
         font-size: 2rem;
-        padding: .5rem;
+        padding: 0.5rem;
     }
 `;
 
@@ -64,38 +67,41 @@ const About = styled.div`
 
 const Subtitle = styled.h2`
     color: #da4ea2;
+    @media only screen and (max-width: 768px) {
+        font-size: 1rem;
+    }
 `;
 
 const Description = styled.div`
-  font-size: 1.2rem;
-  color: lightgray;
-  @media only screen and (max-width: 768px) {
-    padding: 1rem;
-    text-align: center;
-    font-size: 1rem;
-  }
+    font-size: 1.2rem;
+    color: lightgray;
+    @media only screen and (max-width: 768px) {
+        padding: 0 1rem;
+        text-align: center;
+        font-size: 1rem;
+    }
 `;
 
 const Img = styled.img`
-  width: 45rem;
-  height: 45rem;
-  object-fit: contain;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  animation: animate 2s infinite ease alternate;
-  @media only screen and (max-width: 768px) {
-    width: 20rem;
-    height: 20rem;
-  }
-  @keyframes animate {
-    to {
-      transform: translateY(20px);
+    width: 45rem;
+    height: 45rem;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    animation: animate 2s infinite ease alternate;
+    @media only screen and (max-width: 768px) {
+        width: 20rem;
+        height: 20rem;
     }
-  }
+    @keyframes animate {
+        to {
+            transform: translateY(20px);
+        }
+    }
 `;
 
 const Button = styled.button`
@@ -110,6 +116,7 @@ const Button = styled.button`
 `;
 
 const Greetings = () => {
+  const github = 'https://github.com/ssamal94';
     return (
         <IntroContainer>
             <Navbar />
@@ -124,10 +131,24 @@ const Greetings = () => {
                         top minds out there and make the best out of all
                         opportunities!
                     </Description>
-                    <Button>Know More</Button>
+                    <Button onClick={() => window.open(github)}>Know More</Button>
                 </Left>
                 <Right>
-                    {/* Handle 3d model */}
+                    <Canvas>
+                        <Suspense fallback={null}>
+                            <OrbitControls enableZoom={false} />
+                            <ambientLight intensity={1} />
+                            <directionalLight position={[3, 2, 1]} />
+                            <Sphere args={[1, 100, 200]} scale={2.4}>
+                                <MeshDistortMaterial
+                                    color="#da4ea2"
+                                    attach="material"
+                                    distort={0.5}
+                                    speed={3}
+                                />
+                            </Sphere>
+                        </Suspense>
+                    </Canvas>
                     <Img src={worldImg} />
                 </Right>
             </Content>

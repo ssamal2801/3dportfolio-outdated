@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Contact from './components/Contact/Contact';
 import Experience from './components/Experience/Experience';
 import Greetings from './components/Greetings/Greetings';
-import Intro from './components/Intro/Intro';
+import Thinkbox from './components/Thinkbox/Thinkbox';
 
 const AppContainer = styled.div`
   height: 100vh;
@@ -24,7 +24,7 @@ function App() {
   return (
     <AppContainer>
       <Greetings/>
-      <Intro/>
+      <Thinkbox/>
       <Experience/>
       <Contact/>
     </AppContainer>
