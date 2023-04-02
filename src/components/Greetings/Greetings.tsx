@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Navbar from '../Navbar/Navbar';
-import worldImg from '../../assets/world.png';
+import worldImg from '/world.png';
 import { OrbitControls, MeshDistortMaterial, Sphere } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
