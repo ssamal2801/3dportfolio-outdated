@@ -91,8 +91,8 @@ const Thinkbox = () => {
                     <Title>Out of box thinking.</Title>
                     <Description>
                         I worked 3 years in customer industry before my
-                        professional software development journey. I know the
-                        market and understand what the clients want.
+                        professional software development journey. I understand the
+                        market and prioritize client focused development.
                     </Description>
                     <Button onClick={()=>window.open(resume)}>Download my resume</Button>
                 </Right>

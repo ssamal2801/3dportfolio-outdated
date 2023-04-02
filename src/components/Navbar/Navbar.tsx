@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import logo from '../../assets/logo.png';
-import { useNavigate } from "react-router-dom";
 
 
 const NavbarContainer = styled.div`
@@ -32,20 +31,6 @@ const Icons = styled.div`
     gap: 2rem;
 `;
 
-const List = styled.ul`
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-
-    @media only screen and (max-width: 768px) {
-    display: none;
-  }
-`;
-
-const ListItem = styled.li`
-    cursor: pointer;
-`;
-
 const Button = styled.button`
     width: 5rem;
     padding: 10px;
@@ -66,11 +51,6 @@ const Navbar = () => {
             <Content>
                 <Links>
                     <Logo src={logo} />
-                    <List>
-                        <ListItem>Intro</ListItem>
-                        <ListItem>Experience</ListItem>
-                        <ListItem>Contact</ListItem>
-                    </List>
                 </Links>
                 <Icons>
                     <Button onClick={() => window.open(linkedin)}>Hire me!</Button>
