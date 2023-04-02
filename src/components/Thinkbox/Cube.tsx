@@ -4,7 +4,7 @@ import { useFrame } from "@react-three/fiber";
 import styled from "styled-components";
 
 const Cube = () => {
-  const textRef = useRef();
+  const textRef = useRef({position:{x:0}});
 const Img = styled.img``;
 
   useFrame(

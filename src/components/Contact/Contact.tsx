@@ -72,14 +72,14 @@ const Right = styled.div`
 `;
 
 const Contact = () => {
-    const form = useRef('');
+    const form = useRef(null);
     const [success, setSuccess] = useState(false);
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
 
         emailjs
-            .sendForm('service_g4a39sy', 'template_lnct5jm', form.current, 'm7-Aj_2coCbBlw2TT')
+            .sendForm('service_g4a39sy', 'template_lnct5jm', form.current || '', 'm7-Aj_2coCbBlw2TT')
             .then(
                 (result) => {
                     console.log(result.text);
