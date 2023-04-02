@@ -1,0 +1,10 @@
+.timeline {
+}
+
+.job {
+    &:hover {
+        cursor: pointer;
+        transition: 1s;
+        transform: scale(1.1);
+    }
+}

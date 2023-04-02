@@ -116,7 +116,7 @@ const Button = styled.button`
 `;
 
 const Greetings = () => {
-  const github = 'https://github.com/ssamal94';
+    const github = 'https://github.com/ssamal94';
     return (
         <IntroContainer>
             <Navbar />
@@ -131,7 +131,9 @@ const Greetings = () => {
                         top minds out there and make the best out of all
                         opportunities!
                     </Description>
-                    <Button onClick={() => window.open(github)}>Know More</Button>
+                    <Button onClick={() => window.open(github)}>
+                        Check My Works
+                    </Button>
                 </Left>
                 <Right>
                     <Canvas>

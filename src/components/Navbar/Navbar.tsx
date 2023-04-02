@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 import logo from '../../assets/logo.png';
 
-
 const NavbarContainer = styled.div`
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
     width: 100%;
 `;
 const Content = styled.div`
@@ -15,9 +14,9 @@ const Content = styled.div`
     padding: 10px 0px;
 
     @media only screen and (max-width: 768px) {
-    width: 100%;
-    padding: 10px;
-  }
+        width: 100%;
+        padding: 10px;
+    }
 `;
 const Links = styled.div`
     align-items: center;
@@ -53,7 +52,9 @@ const Navbar = () => {
                     <Logo src={logo} />
                 </Links>
                 <Icons>
-                    <Button onClick={() => window.open(linkedin)}>Hire me!</Button>
+                    <Button onClick={() => window.open(linkedin)}>
+                        Hire me!
+                    </Button>
                 </Icons>
             </Content>
         </NavbarContainer>

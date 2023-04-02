@@ -7,31 +7,30 @@ import Greetings from './components/Greetings/Greetings';
 import Thinkbox from './components/Thinkbox/Thinkbox';
 
 const AppContainer = styled.div`
-  height: 100vh;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-  overflow-y: auto;
-  scrollbar-width: none;
-  color: white;
-  background: black;
-  &::-webkit-scrollbar{
-    display: none;
-  }
-  @media only screen and (max-width: 768px) {
-    scroll-snap-type: none;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    scrollbar-width: none;
+    color: white;
+    background: black;
+    &::-webkit-scrollbar {
+        display: none;
     }
-`
+    @media only screen and (max-width: 768px) {
+        scroll-snap-type: none;
+    }
+`;
 
 function App() {
-
-  return (
-    <AppContainer>
-      <Greetings/>
-      <Thinkbox/>
-      <Experience/>
-      <Contact/>
-    </AppContainer>
-  )
+    return (
+        <AppContainer>
+            <Greetings />
+            <Thinkbox />
+            <Experience />
+            <Contact />
+        </AppContainer>
+    );
 }
 
-export default App
+export default App;
