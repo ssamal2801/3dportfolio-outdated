@@ -5,7 +5,7 @@ import Map from './Map';
 
 const ContactContainer = styled.div`
     height: 100vh;
-    'scrollSnapAlign': center;
+    scroll-snap-align: center;
 `;
 
 const Content = styled.div`
