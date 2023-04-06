@@ -26,7 +26,10 @@ const Map = () => {
     }
     return (
             <GoogleMap zoom={10} center={center} mapContainerStyle={mapstyles}>
-                <Marker position={center} />
+                <Marker 
+                position={center} 
+                label={"I'm Here!"}
+                />
             </GoogleMap>
     );
 };
