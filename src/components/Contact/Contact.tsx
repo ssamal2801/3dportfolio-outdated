@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import Map from './Map';
 
 const ContactContainer = styled.div`
-    height: '100vh',
-    'scrollSnapAlign': 'center',
+    height: 100vh;
+    'scrollSnapAlign': center;
 `;
 
 const Content = styled.div`
