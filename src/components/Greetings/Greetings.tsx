@@ -132,7 +132,7 @@ const Greetings = () => {
                         opportunities!
                     </Description>
                     <Button onClick={() => window.open(github)}>
-                        Check My Works
+                        Check My Work
                     </Button>
                 </Left>
                 <Right>

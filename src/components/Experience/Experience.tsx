@@ -7,6 +7,7 @@ const ExperienceContainer = styled.div`
     overflow: hidden;
     @media only screen and (max-width: 768px) {
       overflow: visible;
+      scroll-snap-align: none;
     }
 `;
 

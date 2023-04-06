@@ -10,7 +10,7 @@ const Cube = () => {
 
   useFrame(
     (state) =>
-      (textRef.current.position.x = Math.sin(state.clock.elapsedTime) * 2)
+      (textRef.current.position.x = Math.sin(state.clock.elapsedTime) * 4)
   );
   return (
     <mesh>
@@ -20,7 +20,7 @@ const Cube = () => {
           <PerspectiveCamera makeDefault position={[0, 0, 5]} />
           <color attach="background" args={["#dc9dcd"]} />
           <Text ref={textRef} fontSize={2} color="#555">
-            Dream
+            Dream Big
           </Text>
         </RenderTexture>
       </meshStandardMaterial>

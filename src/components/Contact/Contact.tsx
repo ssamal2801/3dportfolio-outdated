@@ -6,6 +6,9 @@ import Map from './Map';
 const ContactContainer = styled.div`
     height: 100vh;
     scroll-snap-align: center;
+    @media only screen and (max-width: 768px) {
+      scroll-snap-align: none;
+    }
 `;
 
 const Content = styled.div`
@@ -28,6 +31,7 @@ const Left = styled.div`
 
 const Title = styled.h1`
     font-weight: 200;
+    font-size: 2rem;
 `;
 
 const Form = styled.form`

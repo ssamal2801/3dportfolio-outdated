@@ -11,6 +11,7 @@ const TimelineWrapper = styled.div`
     height: 100vh;
     @media only screen and (max-width: 768px) {
         padding: 2rem;
+        height: auto;
     }
 `;
 
