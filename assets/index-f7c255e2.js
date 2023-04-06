@@ -101,6 +101,9 @@ PERFORMANCE OF THIS SOFTWARE.
 `,u4=()=>{const n=A.useMemo(()=>({lat:43.46991,lng:-80.580588}),[]),{isLoaded:e}=LC({googleMapsApiKey:"AIzaSyCo2Le8QOwTG_iiFi3uw_hkOuxB3gSln9g"});return e?Ze(ND,{zoom:10,center:n,mapContainerStyle:a4,children:Ze(CC,{position:n})}):Ze(l4,{children:"Error loading map"})},c4=Ct.div`
     height: 100vh;
     scroll-snap-align: center;
+    @media only screen and (max-width: 768px) {
+      scroll-snap-align: none;
+    }
 `,f4=Ct.div`
     width: 100%;
     height: 100%;
@@ -117,6 +120,7 @@ PERFORMANCE OF THIS SOFTWARE.
     }
 `,h4=Ct.h1`
     font-weight: 200;
+    font-size: 2rem;
 `,p4=Ct.form`
     width: 500px;
     display: flex;
@@ -156,6 +160,7 @@ PERFORMANCE OF THIS SOFTWARE.
     height: 100vh;
     @media only screen and (max-width: 768px) {
         padding: 2rem;
+        height: auto;
     }
 `,W4=Ct.h3`
     font-size: 1.5rem;
@@ -168,6 +173,7 @@ PERFORMANCE OF THIS SOFTWARE.
     overflow: hidden;
     @media only screen and (max-width: 768px) {
       overflow: visible;
+      scroll-snap-align: none;
     }
 `,q4=()=>Ze(Z4,{children:Ze(Y4,{})}),J4=""+new URL("../logo.png",import.meta.url).href,$4=Ct.div`
     display: flex;
@@ -4029,7 +4035,7 @@ vec3 mod289(vec3 x){return x-floor(x*(1.0/289.0))*289.0;}vec4 mod289(vec4 x){ret
         display: none;
     }
     @media only screen and (max-width: 768px) {
-        scroll-snap-type: none;
         height: auto;
+        scroll-snap-type: none;
     }
 `;function RH(){return Ei(PH,{children:[Ze(xH,{}),Ze(AH,{}),Ze(q4,{}),Ze(y4,{})]})}cy.createRoot(document.getElementById("root")).render(Ze(Ko.StrictMode,{children:Ze(RH,{})}));
