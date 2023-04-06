@@ -3963,7 +3963,7 @@ vec3 mod289(vec3 x){return x-floor(x*(1.0/289.0))*289.0;}vec4 mod289(vec4 x){ret
     border: none;
     border-radius: 5px;
     cursor: pointer;
-`,xH=()=>{const n="https://github.com/ssamal94";return Ei(uH,{children:[Ze(iO,{}),Ei(cH,{children:[Ei(fH,{children:[Ze(hH,{children:"Inovate. Develop. Design."}),Ze(pH,{children:Ze(mH,{children:"Full Stack Software Developer"})}),Ze(gH,{children:"In a quest to learn more and more from the industry’s top minds out there and make the best out of all opportunities!"}),Ze(yH,{onClick:()=>window.open(n),children:"Check My Works"})]}),Ei(dH,{children:[Ze(iP,{children:Ei(A.Suspense,{fallback:null,children:[Ze(gP,{enableZoom:!1}),Ze("ambientLight",{intensity:1}),Ze("directionalLight",{position:[3,2,1]}),Ze(oH,{args:[1,100,200],scale:2.4,children:Ze(rH,{color:"#da4ea2",attach:"material",distort:.5,speed:3})})]})}),Ze(vH,{src:rO})]})]})]})};Ct.img``;const _H=()=>{const n=A.useRef({position:{x:0}});return Bd(e=>n.current.position.x=Math.sin(e.clock.elapsedTime)*2),Ei("mesh",{children:[Ze("boxGeometry",{}),Ze("meshStandardMaterial",{children:Ei(aH,{attach:"map",children:[Ze(tH,{makeDefault:!0,position:[0,0,5]}),Ze("color",{attach:"background",args:["#dc9dcd"]}),Ze(KG,{ref:n,fontSize:2,color:"#555",children:"Dream"})]})})]})},SH=""+new URL("../resume.pdf",import.meta.url).href,wH=Ct.div`
+`,xH=()=>{const n="https://github.com/ssamal94";return Ei(uH,{children:[Ze(iO,{}),Ei(cH,{children:[Ei(fH,{children:[Ze(hH,{children:"Inovate. Develop. Design."}),Ze(pH,{children:Ze(mH,{children:"Full Stack Software Developer"})}),Ze(gH,{children:"In a quest to learn more and more from the industry’s top minds out there and make the best out of all opportunities!"}),Ze(yH,{onClick:()=>window.open(n),children:"Check My Work"})]}),Ei(dH,{children:[Ze(iP,{children:Ei(A.Suspense,{fallback:null,children:[Ze(gP,{enableZoom:!1}),Ze("ambientLight",{intensity:1}),Ze("directionalLight",{position:[3,2,1]}),Ze(oH,{args:[1,100,200],scale:2.4,children:Ze(rH,{color:"#da4ea2",attach:"material",distort:.5,speed:3})})]})}),Ze(vH,{src:rO})]})]})]})};Ct.img``;const _H=()=>{const n=A.useRef({position:{x:0}});return Bd(e=>n.current.position.x=Math.sin(e.clock.elapsedTime)*4),Ei("mesh",{children:[Ze("boxGeometry",{}),Ze("meshStandardMaterial",{children:Ei(aH,{attach:"map",children:[Ze(tH,{makeDefault:!0,position:[0,0,5]}),Ze("color",{attach:"background",args:["#dc9dcd"]}),Ze(KG,{ref:n,fontSize:2,color:"#555",children:"Dream Big"})]})})]})},SH=""+new URL("../resume.pdf",import.meta.url).href,wH=Ct.div`
     height: 100vh;
     scroll-snaps-align: center;
     display: flex;
@@ -4030,5 +4030,6 @@ vec3 mod289(vec3 x){return x-floor(x*(1.0/289.0))*289.0;}vec4 mod289(vec4 x){ret
     }
     @media only screen and (max-width: 768px) {
         scroll-snap-type: none;
+        height: auto;
     }
 `;function RH(){return Ei(PH,{children:[Ze(xH,{}),Ze(AH,{}),Ze(q4,{}),Ze(y4,{})]})}cy.createRoot(document.getElementById("root")).render(Ze(Ko.StrictMode,{children:Ze(RH,{})}));
