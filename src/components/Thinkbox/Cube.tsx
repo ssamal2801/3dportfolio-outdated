@@ -3,9 +3,10 @@ import { PerspectiveCamera, RenderTexture, Text } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import styled from "styled-components";
 
+const Img = styled.img``;
+
 const Cube = () => {
   const textRef = useRef({position:{x:0}});
-const Img = styled.img``;
 
   useFrame(
     (state) =>

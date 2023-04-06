@@ -3,10 +3,10 @@ import emailjs from '@emailjs/browser';
 import styled from 'styled-components';
 import Map from './Map';
 
-const ContactContainer = styled.div({
+const ContactContainer = styled.div`
     height: '100vh',
     'scrollSnapAlign': 'center',
-});
+`;
 
 const Content = styled.div`
     width: 100%;
@@ -79,7 +79,12 @@ const Contact = () => {
         e.preventDefault();
 
         emailjs
-            .sendForm('service_g4a39sy', 'template_lnct5jm', form.current || '', 'm7-Aj_2coCbBlw2TT')
+            .sendForm(
+                'service_g4a39sy',
+                'template_lnct5jm',
+                form.current || '',
+                'm7-Aj_2coCbBlw2TT'
+            )
             .then(
                 (result) => {
                     console.log(result.text);
@@ -106,7 +111,7 @@ const Contact = () => {
                         />
                         <Button type="submit">Send</Button>
                         {success &&
-                            "Thanks you for reaching out, I will get back to you at the soonest :)"}
+                            'Thanks you for reaching out, I will get back to you at the soonest :)'}
                     </Form>
                 </Left>
                 <Right>
