@@ -99,8 +99,8 @@ PERFORMANCE OF THIS SOFTWARE.
     height: 100%;
     color: white;
 `,u4=()=>{const n=A.useMemo(()=>({lat:43.46991,lng:-80.580588}),[]),{isLoaded:e}=LC({googleMapsApiKey:"AIzaSyCo2Le8QOwTG_iiFi3uw_hkOuxB3gSln9g"});return e?Ze(ND,{zoom:10,center:n,mapContainerStyle:a4,children:Ze(CC,{position:n})}):Ze(l4,{children:"Error loading map"})},c4=Ct.div`
-    height: '100vh',
-    'scrollSnapAlign': 'center',
+    height: 100vh;
+    scroll-snap-align: center;
 `,f4=Ct.div`
     width: 100%;
     height: 100%;
