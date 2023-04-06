@@ -98,7 +98,7 @@ PERFORMANCE OF THIS SOFTWARE.
     width: 100%;
     height: 100%;
     color: white;
-`,u4=()=>{const n=A.useMemo(()=>({lat:43.46991,lng:-80.580588}),[]),{isLoaded:e}=LC({googleMapsApiKey:"AIzaSyCo2Le8QOwTG_iiFi3uw_hkOuxB3gSln9g"});return e?Ze(ND,{zoom:10,center:n,mapContainerStyle:a4,children:Ze(CC,{position:n})}):Ze(l4,{children:"Error loading map"})},c4=Ct.div`
+`,u4=()=>{const n=A.useMemo(()=>({lat:43.46991,lng:-80.580588}),[]),{isLoaded:e}=LC({googleMapsApiKey:"AIzaSyCo2Le8QOwTG_iiFi3uw_hkOuxB3gSln9g"});return e?Ze(ND,{zoom:10,center:n,mapContainerStyle:a4,children:Ze(CC,{position:n,label:"I'm Here!"})}):Ze(l4,{children:"Error loading map"})},c4=Ct.div`
     height: 100vh;
     scroll-snap-align: center;
     @media only screen and (max-width: 768px) {
