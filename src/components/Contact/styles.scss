@@ -1,0 +1,12 @@
+.error{
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  from {
+    box-shadow: none;
+  }
+  to {
+    box-shadow: 0px 0px 0px 4px red inset;
+  }     
+}

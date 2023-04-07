@@ -2,12 +2,13 @@ import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import styled from 'styled-components';
 import Map from './Map';
+import './styles.scss';
 
 const ContactContainer = styled.div`
     height: 100vh;
     scroll-snap-align: center;
     @media only screen and (max-width: 768px) {
-      scroll-snap-align: none;
+        scroll-snap-align: none;
     }
 `;
 
@@ -78,10 +79,32 @@ const Right = styled.div`
 const Contact = () => {
     const form = useRef(null);
     const [success, setSuccess] = useState(false);
+    const [formErrors, setFormErrors] = useState({
+        name: '',
+        email: '',
+        message: '',
+    });
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: '',
+    });
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
-
+        const emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (!formData.name) {
+            setFormErrors({ ...formErrors, name: 'error' });
+            return;
+        }
+        if (!formData.email.match(emailFormat)) {
+            setFormErrors({ ...formErrors, email: 'error' });
+            return;
+        }
+        if (!formData.message) {
+            setFormErrors({ ...formErrors, message: 'error' });
+            return;
+        }
         emailjs
             .sendForm(
                 'service_g4a39sy',
@@ -93,6 +116,8 @@ const Contact = () => {
                 (result) => {
                     console.log(result.text);
                     setSuccess(true);
+                    e.target.reset();
+                    setFormErrors({ name: '', email: '', message: '' });
                 },
                 (error) => {
                     console.log(error.text);
@@ -106,12 +131,63 @@ const Contact = () => {
                 <Left>
                     <Form ref={form} onSubmit={handleSubmit}>
                         <Title>Contact Me</Title>
-                        <Input placeholder="Name" name="name" />
-                        <Input placeholder="Email" name="email" />
+                        <Input
+                            className={formErrors.name ? 'error' : ''}
+                            placeholder={
+                                formErrors.name
+                                    ? 'Name cannot be empty'
+                                    : 'Name'
+                            }
+                            name="name"
+                            onChange={(e) => {
+                                setFormData({
+                                    ...formData,
+                                    name: e.target.value,
+                                });
+                            }}
+                            onClick={() => setFormErrors({
+                                ...formErrors,
+                                name: '',
+                            })}
+                        />
+                        <Input
+                            className={formErrors.email ? 'error' : ''}
+                            placeholder={
+                                formErrors.email
+                                    ? 'Invalid email address'
+                                    : 'Email'
+                            }
+                            name="email"
+                            onChange={(e) => {
+                                setFormData({
+                                    ...formData,
+                                    email: e.target.value,
+                                });
+                            }}
+                            onClick={() => setFormErrors({
+                                ...formErrors,
+                                email: '',
+                            })}
+                        />
                         <TextArea
-                            placeholder="Message"
+                            className={formErrors.message ? 'error' : ''}
+                            placeholder={
+                                formErrors.message
+                                    ? 'Message cannot be empty'
+                                    : 'Message'
+                            }
                             name="message"
                             rows={10}
+                            onChange={(e) => {
+                                setFormData({
+                                    ...formData,
+                                    message: e.target.value,
+                                });
+                            }}
+                            onClick={() => setFormErrors({
+                                ...formErrors,
+                                message: '',
+                            })}
                         />
                         <Button type="submit">Send</Button>
                         {success &&
