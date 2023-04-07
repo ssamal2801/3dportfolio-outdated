@@ -62,6 +62,9 @@ const Description = styled.div`
     }
 `;
 
+const I = styled.i``;
+const Span = styled.span``;
+
 const Button = styled.button`
     background-color: #da4ea2;
     color: white;
@@ -94,7 +97,7 @@ const Thinkbox = () => {
                         professional software development journey. I understand the
                         market and prioritize client focused development.
                     </Description>
-                    <Button onClick={()=>window.open(resume)}>Download my resume</Button>
+                    <Button onClick={()=>window.open(resume)}><I className="fa fa-download"/> <Span> Resume</Span></Button>
                 </Right>
             </Content>
         </ThinkboxContainer>
