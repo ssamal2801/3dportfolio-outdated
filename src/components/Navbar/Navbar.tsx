@@ -44,7 +44,7 @@ const Logo = styled.img`
 `;
 
 const Navbar = () => {
-    const linkedin = 'https://www.linkedin.com/in/ssamal94/';
+    const linkedin = 'https://www.linkedin.com/in/ssamal2801/';
     return (
         <NavbarContainer>
             <Content>

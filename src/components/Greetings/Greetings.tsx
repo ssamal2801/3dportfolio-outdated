@@ -116,7 +116,7 @@ const Button = styled.button`
 `;
 
 const Greetings = () => {
-    const github = 'https://github.com/ssamal94';
+    const github = 'https://github.com/ssamal2801';
     return (
         <IntroContainer>
             <Navbar />

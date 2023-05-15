@@ -1,2 +1,2 @@
-export const github = 'https://github.com/ssamal94';
-export const linkedin = 'https://www.linkedin.com/in/ssamal94/';
+export const github = 'https://github.com/ssamal2801';
+export const linkedin = 'https://www.linkedin.com/in/ssamal2801/';

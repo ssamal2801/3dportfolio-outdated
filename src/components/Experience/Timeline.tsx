@@ -25,7 +25,7 @@ const Location = styled.h4`
 const Skills = styled.p``;
 
 const Timeline = () => {
-    const linkedin = 'https://www.linkedin.com/in/ssamal94/';
+    const linkedin = 'https://www.linkedin.com/in/ssamal2801/';
     const jobs = [
         {
             date: 'June 2022 - Present',
