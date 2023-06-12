@@ -16,7 +16,7 @@ const Cube = () => {
     <mesh>
       <boxGeometry/>
       <meshStandardMaterial>
-        <RenderTexture attach="map">
+        <RenderTexture attach="map" sourceFile="">
           <PerspectiveCamera makeDefault position={[0, 0, 5]} />
           <color attach="background" args={["#dc9dcd"]} />
           <Text ref={textRef} fontSize={2} color="#555">
