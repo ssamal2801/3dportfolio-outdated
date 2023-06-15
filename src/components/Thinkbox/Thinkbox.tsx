@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import Cube from './Cube';
-import resume from '/resume.pdf';
+import resume from '/swagat_samal_resume.pdf';
 
 const ThinkboxContainer = styled.div`
     height: 100vh;
