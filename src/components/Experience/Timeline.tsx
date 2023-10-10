@@ -28,7 +28,14 @@ const Timeline = () => {
     const linkedin = 'https://www.linkedin.com/in/ssamal2801/';
     const jobs = [
         {
-            date: 'June 2022 - Present',
+            date: 'July 2023 - Present',
+            icon: HashIcon,
+            jobTitle: 'Software Developer',
+            location: 'Turner Fleischer Architects Inc., North York, ON',
+            skills: 'React.js, Redux.js, .Net Core, .Net MVC, React Material UI, Ant Design, Three.js, Pytorch, REST Api, IOT, MySQL, Microsoft SQL',
+        },
+        {
+            date: 'June 2022 - June 2023',
             icon: HashIcon,
             jobTitle: 'Software Developer',
             location: 'Sienci Labs, Waterloo, ON',
@@ -77,13 +84,18 @@ const Timeline = () => {
                         icon={<job.icon />}
                         key={job.date}
                     >
-                        <JobTitle className="vertical-timeline-element-title" onClick={() => window.open(linkedin)}>
+                        <JobTitle
+                            className="vertical-timeline-element-title"
+                            onClick={() => window.open(linkedin)}
+                        >
                             {job.jobTitle}
                         </JobTitle>
                         <Location className="vertical-timeline-element-subtitle">
                             {job.location}
                         </Location>
-                        <Skills onClick={() => window.open(linkedin)}>{job.skills}</Skills>
+                        <Skills onClick={() => window.open(linkedin)}>
+                            {job.skills}
+                        </Skills>
                     </VerticalTimelineElement>
                 ))}
             </VerticalTimeline>
