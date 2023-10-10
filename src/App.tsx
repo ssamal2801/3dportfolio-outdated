@@ -7,8 +7,8 @@ import Greetings from './components/Greetings/Greetings';
 import Thinkbox from './components/Thinkbox/Thinkbox';
 
 const AppContainer = styled.div`
-    height: 100vh;
-    scroll-snap-type: y mandatory;
+    /* height: 100vh; */
+    /* scroll-snap-type: y mandatory; */
     scroll-behavior: smooth;
     overflow-y: auto;
     scrollbar-width: none;

@@ -7,7 +7,6 @@ import { Suspense } from 'react';
 
 const IntroContainer = styled.div`
     height: 90vh;
-    scroll-snaps-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;

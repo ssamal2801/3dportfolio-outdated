@@ -1,12 +1,11 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import styled from 'styled-components';
-import Map from './Map';
+import TechStack from './TechStack';
 import './styles.scss';
 
 const ContactContainer = styled.div`
     height: 100vh;
-    scroll-snap-align: center;
     @media only screen and (max-width: 768px) {
         scroll-snap-align: none;
     }
@@ -21,13 +20,14 @@ const Content = styled.div`
 `;
 
 const Left = styled.div`
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @media only screen and (max-width: 768px) {
-        justify-content: center;
-    }
+    width: 60%;
+    padding: 2rem;
+    margin: auto;
+`;
+
+const Right = styled.div`
+    padding: 2rem;
+    margin: auto;
 `;
 
 const Title = styled.h1`
@@ -67,13 +67,6 @@ const Button = styled.button`
     cursor: pointer;
     border-radius: 5px;
     padding: 20px;
-`;
-
-const Right = styled.div`
-    flex: 1;
-    @media only screen and (max-width: 768px) {
-        display: none;
-    }
 `;
 
 const Contact = () => {
@@ -129,6 +122,10 @@ const Contact = () => {
         <ContactContainer>
             <Content>
                 <Left>
+                    <h3>Languages and Tools</h3>
+                    <TechStack />
+                </Left>
+                <Right>
                     <Form ref={form} onSubmit={handleSubmit}>
                         <Title>Contact Me</Title>
                         <Input
@@ -145,10 +142,12 @@ const Contact = () => {
                                     name: e.target.value,
                                 });
                             }}
-                            onClick={() => setFormErrors({
-                                ...formErrors,
-                                name: '',
-                            })}
+                            onClick={() =>
+                                setFormErrors({
+                                    ...formErrors,
+                                    name: '',
+                                })
+                            }
                         />
                         <Input
                             className={formErrors.email ? 'error' : ''}
@@ -164,10 +163,12 @@ const Contact = () => {
                                     email: e.target.value,
                                 });
                             }}
-                            onClick={() => setFormErrors({
-                                ...formErrors,
-                                email: '',
-                            })}
+                            onClick={() =>
+                                setFormErrors({
+                                    ...formErrors,
+                                    email: '',
+                                })
+                            }
                         />
                         <TextArea
                             className={formErrors.message ? 'error' : ''}
@@ -184,18 +185,17 @@ const Contact = () => {
                                     message: e.target.value,
                                 });
                             }}
-                            onClick={() => setFormErrors({
-                                ...formErrors,
-                                message: '',
-                            })}
+                            onClick={() =>
+                                setFormErrors({
+                                    ...formErrors,
+                                    message: '',
+                                })
+                            }
                         />
                         <Button type="submit">Send</Button>
                         {success &&
                             'Thanks you for reaching out, I will get back to you at the soonest :)'}
                     </Form>
-                </Left>
-                <Right>
-                    <Map />
                 </Right>
             </Content>
         </ContactContainer>
