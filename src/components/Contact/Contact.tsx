@@ -17,12 +17,20 @@ const Content = styled.div`
     display: flex;
     justify-content: space-between;
     gap: 50px;
+    @media only screen and (max-width: 768px) {
+        flex-direction: column;
+        gap: 0;
+    }
 `;
 
 const Left = styled.div`
     width: 60%;
     padding: 2rem;
     margin: auto;
+    @media only screen and (max-width: 768px) {
+        width: 78%;
+        padding: 0;
+    }
 `;
 
 const Right = styled.div`

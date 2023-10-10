@@ -13,7 +13,7 @@ const AppContainer = styled.div`
     overflow-y: auto;
     scrollbar-width: none;
     color: white;
-    background: black;
+    background: #282828;
     &::-webkit-scrollbar {
         display: none;
     }
