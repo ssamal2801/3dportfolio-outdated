@@ -145,7 +145,7 @@ const Greetings = () => {
                                     color="#da4ea2"
                                     attach="material"
                                     distort={0.5}
-                                    speed={3}
+                                    speed={1}
                                 />
                             </Sphere>
                         </Suspense>
