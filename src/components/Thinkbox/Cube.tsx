@@ -7,7 +7,7 @@ const Img = styled.img``;
 
 const Cube = () => {
     const textRef = useRef({ position: { x: 0 } });
-    const cubeRef = useRef<THREE.Mesh>();
+    const cubeRef = useRef<any>();
 
     const handleScroll = () => {
         const scrollValue =
@@ -29,7 +29,7 @@ const Cube = () => {
         <mesh ref={cubeRef}>
             <boxGeometry />
             <meshStandardMaterial>
-                <RenderTexture attach="map" sourceFile="">
+                <RenderTexture attach="map">
                     <PerspectiveCamera makeDefault position={[0, 0, 5]} />
                     <color attach="background" args={['#dc9dcd']} />
                     <Text ref={textRef} fontSize={.8} color="#555">
