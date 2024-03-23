@@ -19,7 +19,7 @@ const Nomap = styled.div`
 const Map = () => {
     const center = useMemo(() => ({ lat: 43.469910, lng: -80.580588 }), []);
     const { isLoaded } = useLoadScript({
-        googleMapsApiKey: 'AIzaSyCo2Le8QOwTG_iiFi3uw_hkOuxB3gSln9g',
+        googleMapsApiKey: '',
     });
     if (!isLoaded) {
         return <Nomap>Error loading map</Nomap>;
